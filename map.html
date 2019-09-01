@@ -1,0 +1,68 @@
+<!--28.6024° N, 81.2001° W  28.8029° N, 81.2695° W  29.2108° N, 81.0228° W  
+   26.6406° N, 81.8723° W  27.9506° N, 82.4572° W */--> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title> Map</title>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 400px /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+    var map;
+    var CENTRAL_BOUNDS = {
+    north: 28.8737,
+    south: 28.3310,
+    west: -98.3713,
+    east: -64.0288,
+    };
+    var ucf = {lat: 28.6024, lng: -81.2001};
+// Initialize and add the map
+function initMap() { 
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: ucf,
+      restriction: {
+          latLngBounds:CENTRAL_BOUNDS,
+          strictBounds: true,
+        },
+      zoom: 7,
+    });
+  
+  
+  var tampa = {lat: 27.9506, lng: -82.4572};
+  var fort = {lat: 26.6406, lng: -81.8723};
+  var beach = {lat: 29.2108, lng: -81.0228};
+  var sanford = {lat: 28.8029, lng: -81.2695};
+// The marker, positioned at Uluru
+var marker = new google.maps.Marker({position: ucf, map: map});
+
+}
+
+  // The map, centered at UCF
+ // var map = new google.maps.Map(
+   //   document.getElementById('map'), {zoom: 2, center: ucf});
+
+
+    
+  
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbY5Hb4pun5dd7JBrT7bG6DoSIJxGpGOQ&callback=initMap">
+    </script>
+  </body>
+</html>
