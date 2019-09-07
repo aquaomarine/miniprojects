@@ -1,0 +1,233 @@
+/*
+#00BFFF - medium blue - used for main page background
+#191970 - dark blue - used for banner and footer backgrounds and some text on main background #221811 - very dark gray/black - used primarily for text
+#A52A2A - reddish orange - used for headers for <dl> on menu page
+#FFE4C4 - sand - used for text in headers and lists
+#00008B - dark blue - used for headers
+*/
+body {
+background-color: #00BFFF;
+background-image: url("../images/ocean.jpg");
+background-repeat: repeat-x;
+color:#221811;
+font-family: Verdana;
+}
+
+header h1
+{
+	color: #00008B;
+	border: solid 1px #FFE4C4;
+	border-radius: 15px;
+	background-image: url(../images/lighthouselogo.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 110px;
+	padding-left: 130px;
+	padding-top: 30px;
+	text-align: center;
+	background-color: #191970;
+}
+
+h3 {
+	color: #FFE4C4;
+}
+ 
+footer {
+	background-image: url(../images/lighthouselogo1.jpg);
+	background-repeat: repeat-x;
+	clear: both;
+	height: 35px;
+	color: #ffe4c4; 
+	margin-top: 2em;
+	border:solid 1px #ffe4c4;
+	border-radius: 6px;
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#address {
+	background-image: url(../images/ocean.jpg);
+	border:solid 1px #FFE4C4;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	margin-top: 50px;
+	color: #191970;
+	font-size: 13pt;
+	font-family: Calibri;
+	font-size: 92%;
+	display: table-cell;
+}
+#address a:link{
+	text-decoration: inherit;
+	color: inherit;
+}
+#address a:visited{
+	text-decoration: inherit;
+	color: inherit;
+}
+#address a:hover{
+	text-decoration: inherit;
+	color: inherit;
+}
+#address a:active{
+	text-decoration: inherit;
+	color: inherit;
+}
+li {
+	color: #FFE4C4;
+}
+p u strong {
+	color: #A52A2A;
+	font-family: Calibri;
+	font-size: 1.4em;
+}
+p u {
+	color: #A52A2A;
+}
+main {
+	display: table-cell;
+}
+nav {
+	font-weight: bold;
+	display: table-cell;
+}
+nav ul{
+	list-style: none;
+	text-align: left;
+}
+nav a:link	{
+	text-decoration: none;
+}
+ul	{
+	list-style-image:url('../images/marker.gif')
+}
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+	min-width: 750px;
+	width: 80%;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th{
+	color: #EAEAEA;
+	background-color: #000066;
+}
+td:nth-child(even){
+	text-align: justify;
+}
+tr:nth-child(even){
+	background-color: #00bfff;
+	text-align: center;
+}
+tr:nth-child(odd){
+background-color: #A9A9A9;
+COLOR: #00008B;
+text-align: center;
+}
+table img{
+	width: 100px;
+	height: 75px;
+}
+table, th,td {
+	border: 2px solid white;
+}
+#alt {
+	display: none;
+}
+@media only screen and (max-width:64em){
+	body{
+		margin: 0;
+	}
+	#wrapper{
+		min-width: 0;
+		width: auto;
+		box-shadow: none;
+		margin-left: unset;
+		margin-right: unset;
+
+	}
+	main{
+		margin-left: 0;
+		display: block;
+	}
+	nav{
+		display: inline;
+		width: auto;
+		text-align: center;
+		padding: 0.5em;
+	}
+	nav li{
+		display: inline;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+		padding-left: 0.75;
+		padding-right: 0.75;
+	}
+	main img{
+		margin-bottom: 5px;
+	}
+	#alt {
+		display: none;
+	}
+	#address a:link{
+		text-decoration: inherit;
+		color: inherit;
+	}
+	#address a:visited{
+		text-decoration: inherit;
+		color: inherit;
+	}
+	#address a:hover{
+		text-decoration: inherit;
+		color: inherit;
+	}
+	#address a:active{
+		text-decoration: inherit;
+		color: inherit;
+	}
+}
+@media only screen and (max-width: 37.5em){
+	header{
+		padding-top: 1em;
+	}
+	main{
+		padding-top: 0.1em;
+		padding-bottom: 0.1em;
+		padding-left: 1em;
+		padding-right: 1em;
+		font-size: 90%;
+	}
+	h1{
+		font-size: 1.5em;
+	}
+	nav li{
+		display: block;
+		margin: 0;
+		border-bottom: 1px solid #FFE4C4;
+	}
+	nav li::first-line {
+		border-top: 1px solid #ffe4c4;
+	}
+	nav a:link {
+		display: block;
+	}
+	main img{
+		display: none;
+		background-image: none;
+	}
+	table {
+		display: none;
+	}
+	#alt {
+		text-align: left; 
+	}
+
+}
